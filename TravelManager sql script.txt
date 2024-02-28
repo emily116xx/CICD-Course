@@ -1,0 +1,11 @@
+CREATE DATABASE TravelManager;
+GO
+
+USE TravelManager;
+GO
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY,
+    UserName NVARCHAR(50),
+    Password NVARCHAR(50)
+);
+

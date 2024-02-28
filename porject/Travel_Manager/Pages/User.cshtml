@@ -1,0 +1,31 @@
+﻿@page
+@model UserModel
+@{
+}
+
+<h2 class="text-center">Let's Travel the World</h2>
+
+
+<div>
+    First Name: @Model.appUser?.FirstName
+</div>
+
+<div>
+    Last Name: @Model.appUser?.LastName
+</div>
+
+<div>
+    Email: @Model.appUser?.Email
+</div>
+
+<div>
+    Phone: @Model.appUser?.PhoneNumber
+</div>
+
+<div>
+    Address: @Model.appUser?.Address
+</div>
+
+<div>
+    Created At: @Model.appUser?.CreatAt.ToString("MM/dd/yyyy")
+</div>

@@ -17,7 +17,7 @@ namespace Travel_Manager.Services
             base.OnModelCreating(builder);
 
             var admin = new IdentityRole("admin");
-
+            //all of this should be in an initializing script
             admin.NormalizedName = "admin";
 
             var client = new IdentityRole("client");

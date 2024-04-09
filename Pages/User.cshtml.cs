@@ -25,6 +25,7 @@ namespace Travel_Manager.Pages
             //here the "user" should be null validated
             var task = userManager.GetUserAsync(User);
             task.Wait();
+            //logging of succees should exist
             appUser = task.Result;
 
         }

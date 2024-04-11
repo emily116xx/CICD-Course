@@ -9,7 +9,7 @@ namespace Travel_Manager.Pages
     [Authorize]
     public class UserModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly UserManager<ApplicationUser> userManager;
 
         public ApplicationUser? appUser;
 
@@ -17,14 +17,11 @@ namespace Travel_Manager.Pages
         {
             this.userManager = userManager;
         }
-        public async Task<IActionResult> OnGetAsync()
+        public void OnGet()
         {
-            AppUser = await _userManager.GetUserAsync(User);
-            if (AppUser == null)
-            {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
-            }
-            return Page();
+          var task = userManager.GetUserAsync(User);
+          task.Wait();
+          appUser = task.Result;
         }
     }
 }

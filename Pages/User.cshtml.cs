@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Travel_Manager.Models;
 
+// Feedback: Implementing dependency injection would greatly enhance the maintainability and flexibility of the code.
 namespace Travel_Manager.Pages
 {
     [Authorize]

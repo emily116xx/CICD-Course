@@ -11,7 +11,7 @@ namespace Travel_Manager.Pages
     {
         private readonly UserManager<ApplicationUser> _userManager;
 
-         private readonly  ApplicationUser? _appUser;
+         public  ApplicationUser? appUser;
 
         public UserModel(UserManager<ApplicationUser> userManager)
         {
@@ -21,7 +21,7 @@ namespace Travel_Manager.Pages
         {
           var task = _userManager.GetUserAsync(User);
           task.Wait();
-          _appUser = task.Result;
+          appUser = task.Result;
         }
     }
 }

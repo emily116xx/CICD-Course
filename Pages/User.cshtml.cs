@@ -9,17 +9,17 @@ namespace Travel_Manager.Pages
     [Authorize]
     public class UserModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
         public ApplicationUser? appUser;
 
         public UserModel(UserManager<ApplicationUser> userManager)
         {
-            this.userManager = userManager;
+            this._userManager = userManager;
         }
         public void OnGet()
         {
-          var task = userManager.GetUserAsync(User);
+          var task = _userManager.GetUserAsync(User);
           task.Wait();
           appUser = task.Result;
         }

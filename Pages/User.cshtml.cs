@@ -10,7 +10,7 @@ namespace Travel_Manager.Pages
     public class UserModel : PageModel
     {
         private readonly UserManager<ApplicationUser> _userManager;
-
+//this is supposed to be a public variable
          public  ApplicationUser? appUser;
 
         public UserModel(UserManager<ApplicationUser> userManager)
